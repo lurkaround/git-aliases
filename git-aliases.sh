@@ -1,9 +1,7 @@
 # list aliases - linux
-
 alias la='!git config -l | grep alias | cut -c 7-'
 
 # Nav Shortcuts
-
 alias dtop='cd /c/users/username/desktop'
 alias projects='cd /c/Users/username/Documents/Projects'
 alias ppCourses='cd /F/courses'  
@@ -25,6 +23,7 @@ alias d='git diff'
 alias dd='diff --check --dirstat --find-copies --find-renames --histogram --color'
 alias ds='git diff --stat'
 alias dc='git diff --cached'
+
 #Adding
 alias a='git add'
 alias aa='git add .'
