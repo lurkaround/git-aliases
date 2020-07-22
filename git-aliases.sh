@@ -18,18 +18,18 @@ alias l1="git log --oneline"
 alias s='git status -s'
 alias log-my-week='git log --author \$(git config user.email) --since "1 week ago"'
 
-#Diff
+#Diff 
 alias d='git diff'
 alias dd='diff --check --dirstat --find-copies --find-renames --histogram --color'
 alias ds='git diff --stat'
 alias dc='git diff --cached'
-
-#Adding
+	
+#Adding 
 alias a='git add'
 alias aa='git add .'
 alias ap='git add -p'
 
-#Committing
+#Committing 
 alias c="git commit"
 alias gc='git commit -v'
 alias ca='git commit -a --verbose'
@@ -39,16 +39,15 @@ alias m='git commit --amend --verbose'
 alias ci='git commit --interactive'
 
 # Add && Commit
-
 alias ac='git add . && git commit -am'
 
 #Backtracking
 alias uncommit="reset --soft HEAD~1"
 alias cleanout='!git clean -df && git checkout -- .'
 
-#Preserving
+#Preserving 
 alias snapshot='!git stash push "snapshot: $(date)" && git stash apply "stash@{0}"'
-alias archive='!"f() { top=$(rev-parse --show-toplevel); cd $top; tar cvf $top.tar \$top ; }; f"'
+alias archive='!"f() { top=$(rev-parse --show-toplevel); cd $top; tar cvf $top.tar $top ; }; f"'
 
 #Branches
 alias b='git branch'
@@ -58,22 +57,22 @@ alias co='git checkout'
 alias cob='git checkout -b'
 
 # list branches sorted by last modified - linux
-
 alias b1='!git for-each-ref --sort="-authordate" --format="%(authordate)%09%(objectname:short)%09%(refname)" refs/heads | sed -e "s-refs/heads/--"'
 
 #stash list
 alias stashes='stash list'
 
-#tags
+#tags 
 alias tags='tag -n1 --list'
 
-#Comparing
+#Comparing 
 alias incoming='git remote update --prune; git log ..@{upstream}'
 alias outgoing='git log @{upstream}..'
 
-#Synchronizing
+#Synchronizing 
 alias get='git fetch --prune && git pull --rebase=preserve && git submodule update --init --recursive'
 alias put='git commit --all && git push'
+
 
 #Publishing
 alias publish='git push -u origin $(git branch-name)'
@@ -83,5 +82,18 @@ alias unpublish='git push origin :$(git branch-name)'
 alias rao='git remote add origin'
 alias pushitgood='push -u origin --all'
 
+#Pushing
+alias push='git push'
+
+#Pulling
+alias pull='git pull'
+
+#Fetching
+alias fetch='git fetch'
+
+#Merging
+alias merge="get merge"
+
 #Change remote url
 alias set-u='git remote set-url'
+
