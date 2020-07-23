@@ -34,12 +34,12 @@ alias c="git commit"
 alias gc='git commit -v'
 alias ca='git commit -a --verbose'
 alias cm='git commit -m'
-alias cam='git commit -a -m'
 alias m='git commit --amend --verbose'
 alias ci='git commit --interactive'
 
 # Add && Commit
 alias ac='git add . && git commit -am'
+alias cam='git commit -a -m'
 
 #Backtracking
 alias uncommit="reset --soft HEAD~1"
@@ -92,7 +92,7 @@ alias pull='git pull'
 alias fetch='git fetch'
 
 #Merging
-alias merge="get merge"
+alias merge="git merge"
 
 #Change remote url
 alias set-u='git remote set-url'
